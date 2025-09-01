@@ -1,0 +1,173 @@
+{
+ "actions": [],
+ "creation": "2025-08-08 12:54:53.164839",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "payment_term",
+  "section_break_15",
+  "description",
+  "section_break_4",
+  "due_date",
+  "mode_of_payment",
+  "column_break_5",
+  "invoice_portion",
+  "section_break_6",
+  "discount_type",
+  "discount_date",
+  "column_break_9",
+  "discount",
+  "section_break_9",
+  "payment_amount",
+  "outstanding",
+  "paid_amount",
+  "discounted_amount",
+  "column_break_3",
+  "base_payment_amount",
+  "base_outstanding",
+  "base_paid_amount"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "payment_term",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Payment Term",
+   "options": "Payment Term",
+   "print_hide": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_15",
+   "fieldtype": "Section Break",
+   "label": "Description"
+  },
+  {
+   "columns": 2,
+   "fetch_from": "payment_term.description",
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Description"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "columns": 2,
+   "fieldname": "due_date",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Due Date"
+  },
+  {
+   "fieldname": "mode_of_payment",
+   "fieldtype": "Data",
+   "label": "Mode of Payment"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 2,
+   "fieldname": "invoice_portion",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Invoice Portion"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "Percentage",
+   "fetch_from": "payment_term.discount_type",
+   "fieldname": "discount_type",
+   "fieldtype": "Select",
+   "label": "Discount Type",
+   "options": "Percentage\nAmount"
+  },
+  {
+   "fieldname": "discount_date",
+   "fieldtype": "Data",
+   "label": "Discount Date",
+   "mandatory_depends_on": "discount"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "payment_term.discount",
+   "fieldname": "discount",
+   "fieldtype": "Data",
+   "label": "Discount"
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "columns": 2,
+   "fieldname": "payment_amount",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Payment Amount"
+  },
+  {
+   "fetch_from": "payment_amount",
+   "fieldname": "outstanding",
+   "fieldtype": "Data",
+   "label": "Outstanding"
+  },
+  {
+   "fieldname": "paid_amount",
+   "fieldtype": "Data",
+   "label": "Paid Amount"
+  },
+  {
+   "default": "0",
+   "fieldname": "discounted_amount",
+   "fieldtype": "Data",
+   "label": "Discounted Amount"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "base_payment_amount",
+   "fieldtype": "Data",
+   "label": "Payment Amount (Company Currency)"
+  },
+  {
+   "fieldname": "base_outstanding",
+   "fieldtype": "Data",
+   "label": "Outstanding (Company Currency)"
+  },
+  {
+   "fieldname": "base_paid_amount",
+   "fieldtype": "Data",
+   "label": "Paid Amount (Company Currency)"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-08-20 11:58:19.649259",
+ "modified_by": "Administrator",
+ "module": "Functionman",
+ "name": "Payment Schedule Dup",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

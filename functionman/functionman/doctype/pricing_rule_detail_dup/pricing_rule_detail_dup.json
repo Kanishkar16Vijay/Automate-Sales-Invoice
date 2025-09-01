@@ -1,0 +1,65 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-08-08 12:32:49.194346",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "pricing_rule",
+  "item_code",
+  "margin_type",
+  "rate_or_discount",
+  "child_docname",
+  "rule_applied"
+ ],
+ "fields": [
+  {
+   "fieldname": "pricing_rule",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Pricing Rule"
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Item Code"
+  },
+  {
+   "fieldname": "margin_type",
+   "fieldtype": "Data",
+   "label": "Margin Type"
+  },
+  {
+   "fieldname": "rate_or_discount",
+   "fieldtype": "Data",
+   "label": "Rate or Discount"
+  },
+  {
+   "fieldname": "child_docname",
+   "fieldtype": "Data",
+   "label": "Child Docname"
+  },
+  {
+   "default": "0",
+   "fieldname": "rule_applied",
+   "fieldtype": "Check",
+   "label": "Rule Applied"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-08-11 12:38:38.491504",
+ "modified_by": "Administrator",
+ "module": "Functionman",
+ "name": "Pricing Rule Detail Dup",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

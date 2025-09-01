@@ -138,17 +138,15 @@ app_license = "mit"
 # Hook on document methods and events
 
 # doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
+# 	"Sales Order": {
+# 		"on_submit": "functionman.manufacturing_flow.get_manufacturing_flow"
 # 	}
 # }
 
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
+scheduler_events = {
 # 	"all": [
 # 		"functionman.tasks.all"
 # 	],
@@ -164,7 +162,12 @@ app_license = "mit"
 # 	"monthly": [
 # 		"functionman.tasks.monthly"
 # 	],
-# }
+    "cron" : {
+        "*/15 * * * *": [
+            "functionman.auto_sales_invoice.create_sales_invoice"
+        ]
+    }
+}
 
 # Testing
 # -------
